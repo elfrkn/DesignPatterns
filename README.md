@@ -33,6 +33,8 @@ Kabaca bir abstact class ve buna bağlı bir ya da birden fazla concrete classta
 Abstract class template class dediğimiz akışın adımlarını ve sıralamasını belirleyen classtır.
 Concrete classlar ise bu akıştaki detayları barındıran classlardır.
 
+Bir örnek ile devam edelim. Örneğimizde bir alışveriş sepetimiz olsun ve bu alışveriş sepetine attığımız ürünlerin ödeme süreci olsun. Bu ödeme süreci genel akış olarak tüm ürünler için aynı olmakla birlikte ürün bazında bazı stepleri farklılık gösterebilir olacaktır ki bu da tam olarak template design pattern kullanmamız gereken senaryodur. Televizyon ve buzdolabi olan iki ürünümüzün satın alma süreci ; başlangıç, ürün seçimi, ödeme ve bitiş olmak üzere her ürün için genel geçer 4 stepten oluşsun ve başlangıç ve bitiş tüm ürünler için ortak iken ürün seçimi ve ödeme şekli stepleri üründen ürüne farklılık göstersin.
+
 ## Observer Design Pattern
 Observer Design Patter, aralarında one-to-many ilişki bulunan ve nesneler arası bağımlılıkların söz konusu olduğu durumlarda, bağımlı nesnelerin bağlı olunan nesnenin durumuna göre güncellenebilmesi/haberdar olabilmesi amacı ile kullanılır. Bu durumda bağımlı olunan(takip edilen, abone olunan) nesne Subject; bağımlı olan(abone) nesne ise Observer olarak isimlendirilir. Davranışsal(Behavioral) tasarım desenlerinden biridir ve kullanılması ile birlikte performans düşüşünün engellenmesi, hata yapma riskinin azaltılması gibi avantajlar elde edilir.
 

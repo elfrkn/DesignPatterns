@@ -26,7 +26,7 @@ Bu yaklaşımda metotlar 2 farklı modele ayrılmalıdır:
 <li>Kompleks iş kurallarının olabileceği veya iş kurallarının sık sık değiştiği yapılarda kullanılabilir.</li>
 <li>Yüksek veri trafiğinin olduğu sistemlerde kullanılabilir.</li>
 
-## Template Method Desaign Pattern
+## Template Method Design Pattern
 Basit ama etkili bir tasarım kalıbı olan Template method design pattern, davranışsal design pattern grubunda yer alır.
 Template Method, akışın(ya da algoritmanın) ana iskeletini kendi elinde tutup detayların geliştirilmesini alt sınıflara bırakır.
 Kabaca bir abstact class ve buna bağlı bir ya da birden fazla concrete classtan oluşur.

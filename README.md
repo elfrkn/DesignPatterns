@@ -32,3 +32,10 @@ Template Method, akışın(ya da algoritmanın) ana iskeletini kendi elinde tutu
 Kabaca bir abstact class ve buna bağlı bir ya da birden fazla concrete classtan oluşur.
 Abstract class template class dediğimiz akışın adımlarını ve sıralamasını belirleyen classtır.
 Concrete classlar ise bu akıştaki detayları barındıran classlardır.
+
+## Observer Design Pattern
+Observer Design Patter, aralarında one-to-many ilişki bulunan ve nesneler arası bağımlılıkların söz konusu olduğu durumlarda, bağımlı nesnelerin bağlı olunan nesnenin durumuna göre güncellenebilmesi/haberdar olabilmesi amacı ile kullanılır. Bu durumda bağımlı olunan(takip edilen, abone olunan) nesne Subject; bağımlı olan(abone) nesne ise Observer olarak isimlendirilir. Davranışsal(Behavioral) tasarım desenlerinden biridir ve kullanılması ile birlikte performans düşüşünün engellenmesi, hata yapma riskinin azaltılması gibi avantajlar elde edilir.
+
+Observer adından da anlaşılacağı üzere gözlemci, izleyici, gözcü yahut gözetmen diye nitelendirilen, anlamı gibi işlev gören bir tasarım desenidir. Elimizdeki mevcut nesnenin durumunda herhangi bir değişiklik olduğunda, bu değişiklerden diğer nesneleri haberdar eden bir tasarımdan bahsediyoruz. Dahada net bir şekilde bahsetmek gerekirse, elimizdeki “x” nesnesinin “y” özelliğinde bir güncellenme, değişiklik yahut belirli bir şartın gerçekleşmesi gibi bir durum cereyan ettiğinde bu “x” nesnesini -izleyen- -gözleyen- diğer “z”, “w”, “k” vs. nesnelerine bu yeni durumu bildiren sisteme Observer tasarım deseni diyoruz.
+
+Observer patternin klasik örnekleri arasında finans örneği gelir. Borsacılar borsadaki herhangi bir değişimden anında haberdar olmak ister. Finans kağıtlarındaki herhangi bir değişimde tüm borsacıları uyarmak mail yahut notifikasyon göndermek istiyorsak observer tasarım deseniyle finans kağıtlarını observe edip, gerekli bildirimi yapabiliriz.

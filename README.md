@@ -41,3 +41,11 @@ Observer Design Patter, aralarında one-to-many ilişki bulunan ve nesneler aras
 Observer adından da anlaşılacağı üzere gözlemci, izleyici, gözcü yahut gözetmen diye nitelendirilen, anlamı gibi işlev gören bir tasarım desenidir. Elimizdeki mevcut nesnenin durumunda herhangi bir değişiklik olduğunda, bu değişiklerden diğer nesneleri haberdar eden bir tasarımdan bahsediyoruz. Dahada net bir şekilde bahsetmek gerekirse, elimizdeki “x” nesnesinin “y” özelliğinde bir güncellenme, değişiklik yahut belirli bir şartın gerçekleşmesi gibi bir durum cereyan ettiğinde bu “x” nesnesini -izleyen- -gözleyen- diğer “z”, “w”, “k” vs. nesnelerine bu yeni durumu bildiren sisteme Observer tasarım deseni diyoruz.
 
 Observer patternin klasik örnekleri arasında finans örneği gelir. Borsacılar borsadaki herhangi bir değişimden anında haberdar olmak ister. Finans kağıtlarındaki herhangi bir değişimde tüm borsacıları uyarmak mail yahut notifikasyon göndermek istiyorsak observer tasarım deseniyle finans kağıtlarını observe edip, gerekli bildirimi yapabiliriz.
+
+## Unit Of Work Design Pattern
+Unit Of Work tasarım deseni, yazılım uygulamamızda veritabanıyla ilgili her bir aksiyonun anlık olarak veritabanına yansıtılmasını engelleyen ve buna nazaran tüm aksiyonları biriktirip bir bütün olarak bir defada tek bir connection üzerinden gerçekleştirilmesini sağlayan ve böylece veritabanı maliyetlerini oldukça minimize eden bir tasarım desenidir.
+
+Veritabanı işlemlerini toplu halde gerçekleştirmemizi sağlayan ve olası bir hata durumunda topyekün geri alınabilmesine olanak tanır.
+
+Unit of Work tasarım deseni, Generic Repository Pattern ile uyumlu bir şekilde kullanılabilen ve faydalı bir yapıdır. Tasarım desenlerini ihtiyaçlarınıza göre kullanmak önemlidir. Özellikle veri işlemlerinin yoğun olduğu uygulamalarda, özellikle e-ticaret sitelerinde sıkça kullanılan bir desendir.
+

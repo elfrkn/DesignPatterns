@@ -64,3 +64,15 @@ Daha İyi Test Edilebilirlik: Repository deseni, veri erişim işlemlerini soyut
 Yeniden Kullanılabilirlik: Veri erişim kodunu ayrı bir katmana yerleştirmek, aynı veri kaynaklarına farklı parçaların erişebilmesini sağlar ve böylece kodun yeniden kullanılabilirliğini artırır.
 
 Repository desenini kullanarak, veri erişim kodu ve iş mantığı ayrılabilir. Genellikle bir arayüz veya soyut sınıf tanımlanır ve bu arayüzü veya soyut sınıfı gerçek veri kaynağına erişimi sağlayan sınıflar (örneğin, veritabanı sınıfları) uygular. Bu sayede, iş mantığı veri erişim detaylarından izole edilmiş olur.
+
+## Composite Design Pattern
+
+Composite Design Pattern, bileşik nesne ve parçaları ile istemci arasındaki ilişkiyi karmaşıklıktan uzak bir şekilde yönetmek amacı ile kullanılır. İstemcinin bileşik nesnedeki tüm parçalar ile tek tek uğraşmasındansa yalnızca bileşik nesne ile uğraşmasını ve böylece parçalara da ulaşabilmesini hedefler. Yapısal(Structural) tasarım desenlerinden biridir ve kullanımı ile birlikte istemci rahatlığı açısından önemli avantajlar elde edilir.
+Nesneleri ağaç yapısına göre düzenleyerek ağaç yapısındaki alt üst ilişkisini kurmaya yarayan bir desendir.
+
+### NE ZAMAN COMPOSITE TASARIM KALIBI KULLANMALIYIZ ?
+<li>Elimizde düzensiz bir nesne yapısı ve bu nesnelerin birleşimi olduğunda</li>
+<li>Client tekil nesne ve nesne grupları arasındaki farklılıkları görmeksizin işlem yapmak istediğinde… (tek fotoğrafın açılması, fotoğraflar grubunun açılması)</li>
+<li>Nesneler grubundaki tüm nesnelerin bir düzen içerisinde aynı işi yapması gerektiğinde</li>
+<li>Kullanıcının isteği doğrultusunda aynı türden veya farklı türlerden bir nesne topluluğu kullanmak zorunda ise, karmaşadan ve karışıklıktan kurtulmak için bileşik kalıp kullanabilir.</li>
+

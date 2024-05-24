@@ -70,7 +70,7 @@ Repository desenini kullanarak, veri erişim kodu ve iş mantığı ayrılabilir
 Composite Design Pattern, bileşik nesne ve parçaları ile istemci arasındaki ilişkiyi karmaşıklıktan uzak bir şekilde yönetmek amacı ile kullanılır. İstemcinin bileşik nesnedeki tüm parçalar ile tek tek uğraşmasındansa yalnızca bileşik nesne ile uğraşmasını ve böylece parçalara da ulaşabilmesini hedefler. Yapısal(Structural) tasarım desenlerinden biridir ve kullanımı ile birlikte istemci rahatlığı açısından önemli avantajlar elde edilir.
 Nesneleri ağaç yapısına göre düzenleyerek ağaç yapısındaki alt üst ilişkisini kurmaya yarayan bir desendir.
 
-### NE ZAMAN COMPOSITE TASARIM KALIBI KULLANMALIYIZ ?
+#### Ne Zaman Composite Tasarım Kalıbı Kullanmalıyız ?
 <li>Elimizde düzensiz bir nesne yapısı ve bu nesnelerin birleşimi olduğunda</li>
 <li>Client tekil nesne ve nesne grupları arasındaki farklılıkları görmeksizin işlem yapmak istediğinde… (tek fotoğrafın açılması, fotoğraflar grubunun açılması)</li>
 <li>Nesneler grubundaki tüm nesnelerin bir düzen içerisinde aynı işi yapması gerektiğinde</li>

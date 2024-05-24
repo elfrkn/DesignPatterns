@@ -49,3 +49,30 @@ Veritabanı işlemlerini toplu halde gerçekleştirmemizi sağlayan ve olası bi
 
 Unit of Work tasarım deseni, Generic Repository Pattern ile uyumlu bir şekilde kullanılabilen ve faydalı bir yapıdır. Tasarım desenlerini ihtiyaçlarınıza göre kullanmak önemlidir. Özellikle veri işlemlerinin yoğun olduğu uygulamalarda, özellikle e-ticaret sitelerinde sıkça kullanılan bir desendir.
 
+## Repository Design Pattern
+
+Repository tasarım deseni, yazılım geliştirme süreçlerinde veri erişimini düzenlemek ve yönetmek için kullanılan bir desen olarak karşımıza çıkar. Bu desen, veri tabanıyla iletişim kurmak, veri işlemlerini gerçekleştirmek ve veri kaynaklarını yönetmek gibi işlemleri soyutlamayı hedefler.
+
+Repository deseni, genellikle nesne tabanlı programlama (OOP) ve katmanlı mimarilerle birlikte kullanılır. Bu tasarım deseni, veritabanına erişimi merkezi bir yerde toplar ve iş mantığını veri erişim detaylarından ayırarak kodun daha temiz, düzenli ve bakımı daha kolay hale gelmesini sağlar.
+
+Repository deseninin ana amacı, veri tabanı işlemlerini ve veri erişimini izole etmek ve soyutlamaktır. Bu, aşağıdaki avantajları sağlar:
+
+Kodun Daha Bakımı Kolay Olması: Veri erişim kodunu merkezi bir yerde toplamak, kodun bakımını ve güncellemelerini daha kolay hale getirir. Veritabanı yapısında değişiklik yapılması gerektiğinde, sadece repository sınıflarında değişiklik yapılması yeterli olabilir.
+
+Daha İyi Test Edilebilirlik: Repository deseni, veri erişim işlemlerini soyutladığı için, iş mantığını test etmek istediğinizde veritabanı ile ilgili detaylarla uğraşmak zorunda kalmazsınız. Bu da kodun daha iyi bir şekilde test edilmesini sağlar.
+
+Yeniden Kullanılabilirlik: Veri erişim kodunu ayrı bir katmana yerleştirmek, aynı veri kaynaklarına farklı parçaların erişebilmesini sağlar ve böylece kodun yeniden kullanılabilirliğini artırır.
+
+Repository desenini kullanarak, veri erişim kodu ve iş mantığı ayrılabilir. Genellikle bir arayüz veya soyut sınıf tanımlanır ve bu arayüzü veya soyut sınıfı gerçek veri kaynağına erişimi sağlayan sınıflar (örneğin, veritabanı sınıfları) uygular. Bu sayede, iş mantığı veri erişim detaylarından izole edilmiş olur.
+
+## Composite Design Pattern
+
+Composite Design Pattern, bileşik nesne ve parçaları ile istemci arasındaki ilişkiyi karmaşıklıktan uzak bir şekilde yönetmek amacı ile kullanılır. İstemcinin bileşik nesnedeki tüm parçalar ile tek tek uğraşmasındansa yalnızca bileşik nesne ile uğraşmasını ve böylece parçalara da ulaşabilmesini hedefler. Yapısal(Structural) tasarım desenlerinden biridir ve kullanımı ile birlikte istemci rahatlığı açısından önemli avantajlar elde edilir.
+Nesneleri ağaç yapısına göre düzenleyerek ağaç yapısındaki alt üst ilişkisini kurmaya yarayan bir desendir.
+
+#### Ne Zaman Composite Tasarım Kalıbı Kullanmalıyız ?
+<li>Elimizde düzensiz bir nesne yapısı ve bu nesnelerin birleşimi olduğunda</li>
+<li>Client tekil nesne ve nesne grupları arasındaki farklılıkları görmeksizin işlem yapmak istediğinde… (tek fotoğrafın açılması, fotoğraflar grubunun açılması)</li>
+<li>Nesneler grubundaki tüm nesnelerin bir düzen içerisinde aynı işi yapması gerektiğinde</li>
+<li>Kullanıcının isteği doğrultusunda aynı türden veya farklı türlerden bir nesne topluluğu kullanmak zorunda ise, karmaşadan ve karışıklıktan kurtulmak için bileşik kalıp kullanabilir.</li>
+

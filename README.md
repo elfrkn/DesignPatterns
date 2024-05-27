@@ -76,3 +76,13 @@ Nesneleri ağaç yapısına göre düzenleyerek ağaç yapısındaki alt üst il
 <li>Nesneler grubundaki tüm nesnelerin bir düzen içerisinde aynı işi yapması gerektiğinde</li>
 <li>Kullanıcının isteği doğrultusunda aynı türden veya farklı türlerden bir nesne topluluğu kullanmak zorunda ise, karmaşadan ve karışıklıktan kurtulmak için bileşik kalıp kullanabilir.</li>
 
+#### MediatR Design Pattern
+MediatR tasarım modeli, bir sistemdeki çeşitli bileşenler veya nesneler arasındaki iletişimi merkezileştirmek için bir nesneyi (aracıyı) tanımlayan bir davranış modelidir. Bu, bileşenlerin aracı aracılığıyla iletişim kurmasını sağlamak yerine bileşenler arasındaki doğrudan etkileşimleri önleyerek gevşek bağlantıyı teşvik eder ve sistem mimarisinde daha iyi bakım kolaylığı ve esneklik sağlar.
+
+MediatR tasarım modeli, önemli ve yaygın olarak kullanılan davranışsal tasarım modellerinden biridir. Mediator, nesneler arasındaki etkileşimin katman aracılığıyla gerçekleşmesi için araya bir katman yerleştirerek nesnelerin ayrıştırılmasını sağlar.
+
+Nesneler birbirleriyle doğrudan etkileşime girerse, sistem bileşenleri birbirine sıkı bir şekilde bağlanır, bu da bakım maliyetinin daha yüksek olmasını ve genişletilmesinin zorlaşmamasını sağlar.
+MediatR modeli, iletişim için nesneler arasında bir aracı sağlamaya odaklanır ve nesneler arasında gevşek bağlantının uygulanmasına yardımcı olur.
+
+
+

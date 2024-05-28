@@ -84,5 +84,19 @@ MediatR tasarım modeli, önemli ve yaygın olarak kullanılan davranışsal tas
 Nesneler birbirleriyle doğrudan etkileşime girerse, sistem bileşenleri birbirine sıkı bir şekilde bağlanır, bu da bakım maliyetinin daha yüksek olmasını ve genişletilmesinin zorlaşmamasını sağlar.
 MediatR modeli, iletişim için nesneler arasında bir aracı sağlamaya odaklanır ve nesneler arasında gevşek bağlantının uygulanmasına yardımcı olur.
 
+## Iterator Design Pattern
 
+Iterator, bir koleksiyonun öğelerini tiplerinden bağımsız (list, stack, tree vb.) tarayarak tekrarlı bir işlem yapmak istediğiniz durumlarda kullanılır.Koleksiyonlar programlamada en çok kullanılan veri tiplerinden biridir. Aslında koleksiyonlar bir grup nesne barından kapsayıcılardan başka bir şey de değildir.Çoğu koleksiyon elemanlarını basit bir listede tutar. Fakat bazıları yığın, ağaç, graph veya başka kompleks yapılarda olabilir.
 
+Koleksiyonun yapısı ne olursa olsun, elemanlarının başka kodlar tarafından erişilir olması için yöntemler sağlamalıdır. Tekrar tekrar aynı elemanlarla karşılaşmadan bütün elemanların üzerinden geçmek için bir yöntem olmalıdır.
+
+Eğer liste bazlı bir koleksiyonla uğraşıyorsanız bu basit bir işlem gibi görünebilir. Baştan başlayarak sona doğru bütün elemanlar üzerinden basitçe geçebilirsiniz. Peki ya ağaç gibi daha kompleks bir yapı ile çalışıyorsanız? Bir gün dikey bir dolaşım tercih ederken, ertesi gün yatay bir dolaşım yapma ihtiyacınız olabilir. Aradan bir hafta geçince de tüm öğeler üzerinden rasgele seçim yöntemi ile geçmek isteyebilirsiniz.
+Koleksiyona daha da farklı dolaşım algoritmaları eklemek, zamanla birincil görevi olan verimli veri depolamayı arka planda bırakacaktır. Ek olarak bazı algoritmalar sadece belirli uygulamalara özel olabilir ve bunları genel bir koleksiyona eklemek tuhaf olacaktır.
+
+Öte yandan istemci kodu çalıştığı çeşitli koleksiyonların elemanları nasıl sakladığı ile de ilgilenmek zorunda değildir. Koleksiyonlar elemanlara erişmek için farklı yollar sağladığından ana kodunuzu bu sınıflara bağımlı hale getirmiş olursunuz.
+
+Iterator deseninin ana fikri bir koleksiyonun dolaşımla ilgili davranışlarını alıp iterator denen ayrı bir objeye yüklemektir.Iterator nesneyi algoritmayı sağlamanın yanı sıra mevcut pozisyon, kalan eleman sayısı vb. dolaşımla ilgili tüm detayları da saklar. Bu nedenle birden fazla iterator, aynı koleksiyon üzerinde ve aynı anda birbirinden bağımsız olarak dolaşım sağlayabilir.
+
+Iteratörler genel olarak bir koleksiyondan elemanları almak için tek bir ana metot sağlarlar. İstemci artık hiç bir sonuç dönmeyene, yani eleman listesinin sonuna gelene kadar bu metodu çağırır.
+
+Tüm iteratorler aynı arayüzden türemek zorundadır. Bu gerekli iteratör oldukça istemci kodun herhangi bir koleksiyon ya da algoritma ile dolaşım yapabilmesini sağlar. Bir koleksiyonda dolaşmak için özel bir yönteme ihtiyacınız varsa sadece gerekli iterator snıfını oluşturur ve istemci kodu ya da koleksiyonu değiştirmeden bu ihtiyacı karşılayabilirsiniz.

@@ -100,3 +100,19 @@ Iterator deseninin ana fikri bir koleksiyonun dolaşımla ilgili davranışları
 Iteratörler genel olarak bir koleksiyondan elemanları almak için tek bir ana metot sağlarlar. İstemci artık hiç bir sonuç dönmeyene, yani eleman listesinin sonuna gelene kadar bu metodu çağırır.
 
 Tüm iteratorler aynı arayüzden türemek zorundadır. Bu gerekli iteratör oldukça istemci kodun herhangi bir koleksiyon ya da algoritma ile dolaşım yapabilmesini sağlar. Bir koleksiyonda dolaşmak için özel bir yönteme ihtiyacınız varsa sadece gerekli iterator snıfını oluşturur ve istemci kodu ya da koleksiyonu değiştirmeden bu ihtiyacı karşılayabilirsiniz.
+
+## Facade Design Pattern
+
+Bir alt sistemin parçalarını oluşturan classları istemciden soyutlayarak kullanımı daha da kolaylaştırmak için tasarlanmış tasarım kalıbıdır. Mimarisel açıdan ise, karmaşık ve detaylı bir sistemi organize eden ve bir bütün olarak clientlara(istemcilere) sunan yapıdır.
+Anlayacağınız, karmaşık ve detaylı olarak nitelendirdiğimiz bu sistemi bir alt sistem olarak varsayarsak eğer bu sistemi kullanacak clientlara daha basit bir arayüz sağlamak ve alt sistemleri bu arayüze organize bir şekilde dahil etmek ve bu alt sistemlerin sağlıklı çalışabilmesi için bu arayüz çatısı altında işin algoritmasına uygun işlev sergilemek istersek Facade Design Pattern’i kullanmaktayız.
+
+Bu desenin temel amacı;
+
+- Alt sistemlerin karmaşıklığını gizlemek: Facade, alt sistemlerin karmaşıklığını gizler ve kullanıcıya sadece gerekli olan bilgileri ve işlevleri sunar.
+-Kolay kullanım: Facade, kullanıcıların sistemi daha kolay anlamalarına ve kullanmalarına yardımcı olur, böylece sistemi daha verimli bir şekilde kullanabilirler.
+-Bağımsızlık: Facade, alt sistemlerin değişikliklerine karşı kullanıcıları korur. Alt sistemlerde yapılan değişiklikler facade üzerinde minimum etki yapar.
+-Facade tasarım deseni genellikle aşağıdaki bileşenlerden oluşur:
+-Facade: Kullanıcıya sunulan ana arayüzdür. Kullanıcı, sistemi bu arayüz üzerinden kullanır.
+-Alt Sistemler (Subsystems): Sistemin karmaşıklığını gizlemek için kullanılan alt sistemlerdir. Facade, bu alt sistemlere erişir ve kullanıcıya sunar.
+-Kullanıcı (Client): Sistemi kullanacak olan taraf, facade üzerinden sistemi kullanır.
+-Facade tasarım deseni, özellikle büyük ve karmaşık yazılım sistemlerinde kullanıcı dostu bir arayüz sağlamak ve sistemin bakımını kolaylaştırmak için oldukça yararlıdır. Bu desen, sistemin genel tasarımını daha modüler hale getirerek daha iyi bir kod organizasyonu sağlar.
